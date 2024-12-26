@@ -25,7 +25,7 @@ public class main {
             for (int j = 0; j < m; j++) {
                a += tudi[i][j];
                if( j == m - 1) {
-                result = Math.min(result, Math.abs(sum - 2*a));
+                    result = Math.min(result, Math.abs(sum - 2*a));
                }
             }
         }
