@@ -1,4 +1,4 @@
-package 链表.定义链表节点;
+package 定义链表节点;
 
 public class ListNode {
     // 结点的值
