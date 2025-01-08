@@ -2,6 +2,10 @@
  * @lc app=leetcode.cn id=203 lang=java
  *
  * [203] 移除链表元素
+ * 
+ * 给你一个链表的头节点 head 和一个整数 val ，
+ * 请你删除链表中所有满足 Node.val == val 的节点，
+ * 并返回新的头节点 。
  */
 
 // @lc code=start
@@ -22,30 +26,32 @@ import 定义链表节点.ListNode;
 class Solution203 {
     public ListNode removeElements(ListNode head, int val) {
         // 1.用原来的链表操作：
-        // while(head != null && head.val == val) {
-        //     head = head.next;
-        // }
-        // ListNode curr = head;
-        // if( curr != null && curr.next != null) {
-        //     curr.next = curr.next.next;
-        // } else {
-        //     curr = curr.next;
-        // }
-        // return head;
-
-        // 2.虚拟头结点法
-        // 设置一个虚拟的头结点
-        ListNode dummy = new ListNode(); 
-        dummy.next = head;
-        ListNode cur = dummy;
-        while(cur.next != null) {
-            if(cur.next.val == val) {
+        while(head != null && head.val == val) {
+            head = head.next;
+        }
+        ListNode cur = head;
+        while(cur != null && cur.next != null) {
+            if (cur.next.val == val) {
                 cur.next = cur.next.next;
             } else {
                 cur = cur.next;
             }
         }
-        return dummy.next;
+        return head;
+
+        // 2.虚拟头结点法
+        // 设置一个虚拟的头结点
+        // ListNode dummy = new ListNode(); 
+        // dummy.next = head;
+        // ListNode cur = dummy;
+        // while(cur.next != null) {
+        //     if(cur.next.val == val) {
+        //         cur.next = cur.next.next;
+        //     } else {
+        //         cur = cur.next;
+        //     }
+        // }
+        // return dummy.next;
     }
 
     
