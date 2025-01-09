@@ -78,8 +78,7 @@ class Solution203 {
         node7.next = null;
         
         Solution203 solution203 = new Solution203();
-        System.out.println(solution203.removeElements(node1, 6).toString());
-        
+        System.out.println(solution203.removeElements(node1, 6).toString());     
     }
 }
 // @lc code=end
