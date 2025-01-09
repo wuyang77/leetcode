@@ -11,7 +11,7 @@
 // @lc code=start
 
 
-import 定义链表节点.ListNode;
+import org.ListNode;
 
 /**
  * Definition for singly-linked list.

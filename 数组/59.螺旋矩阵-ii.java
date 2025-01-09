@@ -7,7 +7,7 @@
 
 // @lc code=start
 
-import java.util.Arrays;
+// import java.util.Arrays;
 
 class Solution {
     public int[][] generateMatrix(int n) {
@@ -30,10 +30,10 @@ class Solution {
         return mat;
     }
 
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(Arrays.deepToString(solution.generateMatrix(10)));
-    }
+    // public static void main(String[] args) {
+    //     Solution solution = new Solution();
+    //     System.out.println(Arrays.deepToString(solution.generateMatrix(10)));
+    // }
 }
 // @lc code=end
 

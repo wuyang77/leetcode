@@ -2,5 +2,6 @@
     "java.debug.settings.onBuildFailureProceed": true,
     "files.associations": {
         "cstddef": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
