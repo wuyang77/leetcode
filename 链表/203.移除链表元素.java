@@ -55,13 +55,9 @@ class Solution203 {
         // 3.递归法
         if (head == null) {
             return head;
-        }
-        
+        }  
         head.next = removeElements(head.next, val);
-        if(head.val == val) {
-            return head.next;
-        }
-        return head;
+        return head.val == val ? head.next : head;
     }
 
     
