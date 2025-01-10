@@ -26,7 +26,7 @@ class ListNodes {
     }
 }
 
-function removeElements(head: ListNodes | null, val: number): ListNode | null {
+function removeElements(head: ListNodes | null, val: number): ListNodes | null {
     const dummy = new ListNodes(0, head);
     dummy.next = head;
     let cur = dummy;
