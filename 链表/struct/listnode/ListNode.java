@@ -1,4 +1,5 @@
-package org;
+package struct.listnode;
+
 
 /**
  * 链表节点类
