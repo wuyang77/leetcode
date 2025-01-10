@@ -1,4 +1,4 @@
-package other.区间和;
+package other.rangesum;
 
 import java.util.Scanner;
 
@@ -8,11 +8,13 @@ import java.util.Scanner;
  * 第一行输入为整数数组 Array 的长度 n，接下来 n 行，每行一个整数，表示数组的元素。随后的输入为需要计算总和的区间，直至文件结束。
  * 输出描述
  * 输出每个指定区间内元素的总和。
+ * @author 吴洋
  */
-public class main {
-    // 输入数组的大小
-    // 新建2个数组
-    
+public class Devloper {
+    /**
+     * 测试
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
@@ -23,7 +25,8 @@ public class main {
         for (int i = 0; i < n; i++) { 
             vec[i] = scanner.nextInt();
             preSum += vec[i];
-            p[i] = preSum; // 前缀和的n次求和，并存值
+            // 前缀和的n次求和，并存值
+            p[i] = preSum;
         }
 
         while(scanner.hasNext()) {

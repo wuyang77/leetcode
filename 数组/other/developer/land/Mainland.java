@@ -1,8 +1,18 @@
-package other.开发商购买土地;
+package other.developer.land;
 
 import java.util.Scanner;
 
-public class main {
+/**
+ * 给定一个n*m的矩阵，矩阵的元素为正整数，表示每一块土地的权值。
+ * 开发商A和开发商B分别购买土地，开发商A购买的土地权值总和为a，开发商B购买的土地权值总和为b。
+ * 请计算开发商A和开发商B购买的土地权值总和的差值的最小值。
+ * 输入描述
+ * 第一行输入为整数n和m，表示矩阵的行数和列数。接下来n行，每行m个整数，表示矩阵的元素。
+ * 输出描述
+ * 输出开发商A和开发商B购买的土地权值总和的差值的最小值。
+ * @author 吴洋
+ */
+public class Mainland {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();

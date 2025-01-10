@@ -1,15 +1,20 @@
 /*
  * @lc app=leetcode.cn id=59 lang=java
- *
- * [59] 螺旋矩阵 II 边界的处理问题 版本1
- * 给定一个正整数 n，生成一个包含 1 到 n^2 所有元素，且元素按顺时针顺序螺旋排列的正方形矩阵。
  */
-
 // @lc code=start
 
-// import java.util.Arrays;
+import java.util.Arrays;
 
+/**
+ * 螺旋矩阵 II 边界的处理问题 版本1
+ * @author 吴洋
+ */
 class Solution {
+    /**
+     * 生成一个包含 1 到 n^2 所有元素，且元素按顺时针顺序螺旋排列的正方形矩阵
+     * @param n 正整数
+     * @return 螺旋矩阵
+     */
     public int[][] generateMatrix(int n) {
         // l左边，r右边，t顶部，b底部
         int l = 0, r = n - 1, t = 0, b = n -1; 
@@ -29,11 +34,14 @@ class Solution {
         }
         return mat;
     }
-
-    // public static void main(String[] args) {
-    //     Solution solution = new Solution();
-    //     System.out.println(Arrays.deepToString(solution.generateMatrix(10)));
-    // }
+    /**
+     * 测试
+     * @param args
+     */
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(Arrays.deepToString(solution.generateMatrix(10)));
+    }
 }
 // @lc code=end
 

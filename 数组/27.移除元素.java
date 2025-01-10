@@ -4,7 +4,17 @@
  * [] 移除元素
  */
 // @lc code=start
+/**
+ * 移除元素的解决方案
+ * @author 吴洋
+ */
 class Solution {
+    /**
+     * 移除数组中所有等于val的元素，返回移除后数组的新长度
+     * @param nums 输入数组
+     * @param val 要移除的值
+     * @return 新数组的长度
+     */
     public int removeElement(int[] nums, int val) {
         int size = nums.length;
         int i = 0;

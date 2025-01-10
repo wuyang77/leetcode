@@ -8,7 +8,17 @@
  */
 
 // @lc code=start
+/**
+ * 二分查找算法实现
+ * @author 吴洋
+ */
 class Solution704 {
+    /**
+     * 在有序数组中查找目标值
+     * @param nums 升序排列的整型数组
+     * @param target 要查找的目标值
+     * @return 目标值的下标，不存在则返回-1
+     */
     public int search(int[] nums, int target) {
         int n = nums.length;
         int mid, left = 0, right = n - 1;

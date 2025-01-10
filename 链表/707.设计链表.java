@@ -20,9 +20,15 @@ class MyLinkedList{
         }
     }
 
-    private int size; // 记录的是链表的大小
-    private ListNode head; // 记录的是虚拟头结点
-    // 初始化链表
+    /** 记录的是链表的大小 */
+    private int size;
+    
+    /** 记录的是虚拟头结点 */
+    private ListNode head;
+    
+    /**
+     * 初始化链表
+     */
     public MyLinkedList() {
         this.size = 0;
         this.head = new ListNode(0);
@@ -83,11 +89,12 @@ class MyLinkedList{
     }
     public static void main(String[] args) {
         MyLinkedList obj = new MyLinkedList();
-        int param = obj.get(0);
         obj.addAtHead(1);
         obj.addAtTail(3);
-        System.out.println(param);
-        
+        obj.addAtIndex(1,2);
+        obj.get(1);
+        obj.deleteAtIndex(1);
+        obj.get(1);       
     }
 }
 
