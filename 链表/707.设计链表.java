@@ -115,7 +115,6 @@ class MyLinkedList{
 }
 /**
  * 设计链表双链表的解法
- 
  */
 class MyLinkedList2 {
     
@@ -170,6 +169,17 @@ class MyLinkedList2 {
         }
         // 返回第 index 个节点的值
         return cur.val;
+    }
+    public void addAtIndex(int index, int val) {
+        if(index < 0 || index > size) {
+            return;
+        }
+        ListNode cur = head;
+        ListNode newNode1 = new ListNode(val);
+        for (int i = 0; i < index; i++) {
+            cur = cur.next;
+        }
+              
     }
 }
 
