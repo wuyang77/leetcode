@@ -72,7 +72,7 @@ class MyLinkedList{
     
     public void addAtIndex(int index, int val) {
         // 如果索引无效，直接返回
-        if(index < 0 || index >= size) {
+        if(index < 0 || index > size) {
             return;
         }
         // 遍历链表，找到第 index 个节点
@@ -152,9 +152,9 @@ class MyLinkedList2 {
             return -1;
         }
         // 用于遍历链表的节点
-        ListNode cur;
+        ListNode cur = null;
         // 判断从头遍历还是从尾遍历，哪边遍历的时间更短
-        if(index < size / HALF) {
+        if(index <= size / HALF) {
             cur = head;
             for (int i = 0; i < index; i++) {
                 // 从头开始遍历
@@ -175,11 +175,33 @@ class MyLinkedList2 {
             return;
         }
         ListNode cur = head;
-        ListNode newNode1 = new ListNode(val);
         for (int i = 0; i < index; i++) {
             cur = cur.next;
         }
-              
+        ListNode newNode1 = new ListNode(val);
+        newNode1.next = cur.next;
+        cur.next.prev = newNode1;
+        cur.next = newNode1;
+        newNode1.prev = cur;
+        size++;      
+    }
+    public void deleteAtIndex(int index) {
+        if(index < 0 || index > size) {
+            return;
+        }
+        ListNode cur = head;
+        for (int i = 0; i < index; i++) {
+            cur = cur.next;
+        }
+        cur.next = cur.next.next;
+        cur.next.next.prev = cur;
+        size--;
+    }
+    public void addAtHead(int val) {
+        addAtIndex(0, val);
+    }
+    public void addAtTail(int val) {
+        addAtIndex(size, val);
     }
 }
 
