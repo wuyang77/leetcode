@@ -4,5 +4,8 @@
         "cstddef": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
-    "leetcode.workspaceFolder": ""
+    "leetcode.workspaceFolder": "",
+    "python.analysis.extraPaths": [
+        "./链表/707."
+    ]
 }

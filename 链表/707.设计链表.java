@@ -41,7 +41,7 @@ class MyLinkedList{
         }
         // 遍历链表，找到第 index 个节点
         ListNode cur = head;
-        for (int i = 0; i < index; i++) {
+        for (int i = 0; i <= index; i++) {
             cur = cur.next;
         }
         // 返回第 index 个节点的值
@@ -156,7 +156,7 @@ class MyLinkedList2 {
         // 判断从头遍历还是从尾遍历，哪边遍历的时间更短
         if(index <= size / HALF) {
             cur = head;
-            for (int i = 0; i < index; i++) {
+            for (int i = 0; i <= index; i++) {
                 // 从头开始遍历
                cur = cur.next; 
             }
