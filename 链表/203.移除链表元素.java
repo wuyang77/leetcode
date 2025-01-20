@@ -11,7 +11,7 @@
 // @lc code=start
 
 
-import org.ListNode;
+import struct.listnode.ListNode;
 
 /**
  * Definition for singly-linked list.
