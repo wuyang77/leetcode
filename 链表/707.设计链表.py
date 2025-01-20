@@ -7,54 +7,54 @@
 # @lc code=start
 
 # 单链表的解法
-# class ListNode:
-#     def __init__(self, val = 0, next = None):
-#         self.val = val
-#         self.next = next
+class ListNode:
+    def __init__(self, val = 0, next = None):
+        self.val = val
+        self.next = next
 
-# class MyLinkedList:
+class MyLinkedList:
 
-#     def __init__(self):
-#         self.size = 0
-#         self.dummy_Head = ListNode()
+    def __init__(self):
+        self.size = 0
+        self.dummy_Head = ListNode()
 
-#     def get(self, index: int) -> int:
-#         if index < 0 or index >= self.size:
-#             return -1
+    def get(self, index: int) -> int:
+        if index < 0 or index >= self.size:
+            return -1
         
-#         cur = self.dummy_Head
-#         for i in range(index + 1):
-#             cur = cur.next
-#         return cur.val
+        cur = self.dummy_Head
+        for i in range(index + 1):
+            cur = cur.next
+        return cur.val
 
-#     def addAtHead(self, val: int) -> None:
-#         self.dummy_Head.next = ListNode(val, self.dummy_Head.next)
-#         self.size += 1
+    def addAtHead(self, val: int) -> None:
+        self.dummy_Head.next = ListNode(val, self.dummy_Head.next)
+        self.size += 1
 
-#     def addAtTail(self, val: int) -> None:
-#         cur = self.dummy_Head
-#         while cur.next:
-#             cur = cur.next
-#         cur.next = ListNode(val, None)
-#         self.size +=1
+    def addAtTail(self, val: int) -> None:
+        cur = self.dummy_Head
+        while cur.next:
+            cur = cur.next
+        cur.next = ListNode(val, None)
+        self.size +=1
 
-#     def addAtIndex(self, index: int, val: int) -> None:
-#         if index < 0 or index > self.size:
-#             return
-#         cur = self.dummy_Head
-#         for i in range(index):
-#             cur = cur.next 
-#         cur.next = ListNode(val, cur.next)
-#         self.size += 1
+    def addAtIndex(self, index: int, val: int) -> None:
+        if index < 0 or index > self.size:
+            return
+        cur = self.dummy_Head
+        for i in range(index):
+            cur = cur.next 
+        cur.next = ListNode(val, cur.next)
+        self.size += 1
 
-#     def deleteAtIndex(self, index: int) -> None:
-#         if index < 0 or index >= self.size:
-#             return
-#         cur = self.dummy_Head
-#         for i in range(index):
-#             cur = cur.next
-#         cur.next = cur.next.next
-#         self.size -=1
+    def deleteAtIndex(self, index: int) -> None:
+        if index < 0 or index >= self.size:
+            return
+        cur = self.dummy_Head
+        for i in range(index):
+            cur = cur.next
+        cur.next = cur.next.next
+        self.size -=1
 
 # 双链表的解法
 class ListNode:
