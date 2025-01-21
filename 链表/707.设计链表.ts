@@ -6,10 +6,10 @@
 
 // @lc code=start
 
-class ListNode {
+class ListNode1 {
     public val: number
-    public next: ListNode | null
-    constructor(val?: number, next?: ListNode | null) {
+    public next: ListNode1 | null
+    constructor(val?: number, next?: ListNode1 | null) {
         this.val = val === undefined ? 0 : val;
         this.next = next === undefined ? null : next;
     }
@@ -34,7 +34,7 @@ class MyLinkedList2 {
     // 获取指定Node节点
     private getNode(index: number): ListNode {
         let curNode: ListNode = new ListNode(0, this.head);
-        for(let i = 0; i < index + 1; i+=) {
+        for(let i = 0; i < index + 1; i++) {
             curNode = curNode.next!;
         }
         return curNode;

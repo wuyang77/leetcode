@@ -1,7 +1,7 @@
-class ListNode {
+class ListNode2 {
     val: number;
-    next: ListNode | null;
-    constructor(val?: number, next?: ListNode | null) {
+    next: ListNode2 | null;
+    constructor(val?: number, next?: ListNode2 | null) {
         this.val = (val === undefined ? 0 : val)
         this.next = (next===undefined ? null : next)
     }
@@ -25,8 +25,8 @@ class ListNode {
  * }
  */
 
-function reverseList(head: ListNode | null): ListNode | null {
-    function reverse(cur: ListNode | null, prev: ListNode | null): ListNode | null {
+function reverseList1(head: ListNode2 | null): ListNode2 | null {
+    function reverse(cur: ListNode2 | null, prev: ListNode2 | null): ListNode2 | null {
         if (cur === null) {
             return prev;
         }

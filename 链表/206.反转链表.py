@@ -16,7 +16,7 @@ class ListNode:
 #         self.val = val
 #         self.next = next
 class Solution:
-    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def reverseList(self, head: ListNode) -> ListNode:
         return self.reverse(head, None);
     def reverse(self, cur, prev):
         if cur is None:
