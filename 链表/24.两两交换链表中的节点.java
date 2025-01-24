@@ -1,7 +1,7 @@
 /**
  * @author 吴洋
  */
-public class ListNode {
+class ListNode {
     int val;
     ListNode next;
     ListNode() {}
@@ -27,22 +27,8 @@ public class ListNode {
  */
 
 class Solution24 {
-    // public ListNode swapPairs(ListNode head) {
-    //     ListNode dummyHead = new ListNode(0, head);
-    //     ListNode cur = dummyHead;
-    //     while(cur.next != null && cur.next.next != null) {
-    //         ListNode temp1 = cur.next;
-    //         ListNode temp2 = cur.next.next.next;
-    //         cur.next = cur.next.next;
-    //         cur.next.next = temp1;
-    //         cur.next.next.next = temp2;
-    //         cur = cur.next.next;
-    //     }
-    //     return dummyHead.next;
-    // }
-
     public ListNode swapPairs(ListNode head) {
-        if(head == null || head.next == null) {
+        if (head == null || head.next == null) {
             return head;
         }
         ListNode newHead = head.next;
@@ -55,7 +41,8 @@ class Solution24 {
         ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
         Solution24 solution = new Solution24();
         ListNode result = solution.swapPairs(head);
-        while(result != null) {
+        
+        while (result != null) {
             System.out.println(result.val);
             result = result.next;
         }
