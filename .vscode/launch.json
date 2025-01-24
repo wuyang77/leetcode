@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MyLinkedList",
+            "request": "launch",
+            "mainClass": "MyLinkedList",
+            "projectName": "leetcode_17974a0f"
+        },
+        {
+            "type": "java",
+            "name": "Solution24",
+            "request": "launch",
+            "mainClass": "Solution24",
+            "projectName": "leetcode_17974a0f"
+        },
+        {
+            "type": "java",
+            "name": "Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "leetcode_17974a0f"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

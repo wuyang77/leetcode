@@ -1,3 +1,9 @@
+struct ListNode {
+    int val;
+    struct ListNode *next;
+    
+}
+
 /*
  * @lc app=leetcode.cn id=203 lang=c
  *
