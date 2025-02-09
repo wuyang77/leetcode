@@ -17,8 +17,8 @@ class ListNode1 {
 
 class MyLinkedList2 {
     private size: number;
-    private head: ListNode | null;
-    private tail: ListNode | null;
+    private head: ListNode1 | null;
+    private tail: ListNode1 | null;
     constructor() {
         // 记录链表长度
         this.size = 0;
@@ -32,8 +32,8 @@ class MyLinkedList2 {
         return cur.val;
     }
     // 获取指定Node节点
-    private getNode(index: number): ListNode {
-        let curNode: ListNode = new ListNode(0, this.head);
+    private getNode(index: number): ListNode1 {
+        let curNode: ListNode1 = new ListNode1(0, this.head);
         for(let i = 0; i < index + 1; i++) {
             curNode = curNode.next!;
         }
@@ -42,7 +42,7 @@ class MyLinkedList2 {
 
     addAtHead(val: number): void {
         // 创建新节点
-        let node: ListNode = new ListNode(val, this.head);
+        let node: ListNode1 = new ListNode1(val, this.head);
         // 更新头节点
         this.head = node;
         // 如果链表为空，则新节点也是尾节点
@@ -53,7 +53,7 @@ class MyLinkedList2 {
     }
 
     addAtTail(val: number): void {
-        let node: ListNode = new ListNode(val, null)
+        let node: ListNode1 = new ListNode1(val, null)
         if(this.tail){
             this.tail.next = node;
         } else {
@@ -75,8 +75,8 @@ class MyLinkedList2 {
             this.addAtHead(val);
             return;
         }
-        let curNode: ListNode = this.getNode(index - 1);
-        let node: ListNode = new ListNode(val, curNode.next);
+        let curNode: ListNode1 = this.getNode(index - 1);
+        let node: ListNode1 = new ListNode1(val, curNode.next);
         curNode.next = node;
         this.size++
     }
@@ -95,7 +95,7 @@ class MyLinkedList2 {
             return;
         }
         // 获取目标节点的前一个节点
-        let curNode: ListNode = this.getNode(index - 1);
+        let curNode: ListNode1 = this.getNode(index - 1);
         // 更新目标节点的前一个节点的next指针
         curNode.next = curNode.next!.next;
         // 如果删除的是尾节点，则更新尾节点
